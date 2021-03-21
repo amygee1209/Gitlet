@@ -1,5 +1,5 @@
 # Gitlet
-Iimplemented a version-control system that mimics some of the basic features of the popular system Git, but smaller and simpler
+Implemented a version-control system that mimics some of the basic features of the popular system Git, but smaller and simpler
 
 A version-control system is essentially a backup system for related collections of files.
 The main functionality that Gitlet supports is:
