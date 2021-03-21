@@ -1,0 +1,45 @@
+# Test for basic checkout operation
+> init
+<<<
+> branch branch1
+<<<
++ f.txt wug.txt
++ g.txt notwug.txt
+> add f.txt
+<<<
+> add g.txt
+<<<
+> commit "Two files"
+<<<
+> branch branch2
+<<<
++ h.txt wug2.txt
++ k.txt wug3.txt
+> add h.txt
+<<<
+> add k.txt
+<<<
+> commit "Add h,k"
+<<<
+> branch branch3
+<<<
+> rm f.txt
+<<<
+> commit "Remove f"
+<<<
+> checkout branch2
+<<<
++ m.txt wug2.txt
++ n.txt wug3.txt
+> add m.txt
+<<<
+> add n.txt
+<<<
+> commit "Add m, n"
+<<<
+> checkout branch3
+<<<
+* f.txt
+E g.txt
+E h.txt
+E k.txt

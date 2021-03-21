@@ -1,0 +1,44 @@
+# Check for merge basic cases
+> init
+<<<
+> branch branch1
+<<<
++ f.txt wug.txt
++ g.txt notwug.txt
+> add f.txt
+<<<
+> add g.txt
+<<<
+> commit "Two files"
+<<<
+> commit "It should error"
+No changes added to the commit.
+<<<
+> branch branch2
+<<<
++ h.txt wug2.txt
++ k.txt wug3.txt
+> rm f.txt
+<<<
+> add h.txt
+<<<
+> add k.txt
+<<<
+> commit "Add h,k remove f"
+<<<
+> checkout master
+No need to checkout the current branch.
+<<<
+> checkout branch2
+<<<
+* f.txt
+= g.txt notwug.txt
++ h.txt notwug.txt
+> add h.txt
+<<<
+> commit "Add new h.txt"
+<<<
+> merge master
+Encountered a merge conflict.
+<<<
+= h.txt conflict7.txt
